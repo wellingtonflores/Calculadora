@@ -34,61 +34,33 @@ $('.numero').on('click', function () {
     }
 });
 
-let totalClicadoVezes = 0;
+console.log('Botão clicado status antes do while: ' + botaoClicado);
 
 $('#total').on('click', function () {
     pressionado($(this));
     switch (operacao) {
         case '+':
-            let resultadoAdicao;
-            if (totalClicadoVezes === 0) {
-                resultadoAdicao = adicao(valor1, valor2);
-                totalClicadoVezes++;
-            } else {
-                resultadoAdicao = adicao(valor2, resultado);
-            }
+            let resultadoAdicao = adicao(valor1, valor2);
             $('.resultado').text(resultadoAdicao);
-            valor2 += resultadoAdicao;
             break;
         case '-':
-            let resultadoSubtracao;
-            if (totalClicadoVezes === 0) {
-                resultadoSubtracao = subtracao(valor1, valor2);
-                totalClicadoVezes++;
-            } else {
-                resultadoSubtracao = subtracao(valor2, resultado);
-            }
+            let resultadoSubtracao = subtracao(valor1, valor2);
             $('.resultado').text(resultadoSubtracao);
-            valor2 -= resultadoSubtracao;
             break;
         case 'x':
-            let resultadoMultiplicacao;
-            if (totalClicadoVezes === 0) {
-                resultadoMultiplicacao = multiplicacao(valor1, valor2);
-                totalClicadoVezes++;
-            } else {
-                resultadoMultiplicacao = multiplicacao(valor2, resultado);
-            }
+            let resultadoMultiplicacao = multiplicacao(valor1, valor2);
             $('.resultado').text(resultadoMultiplicacao);
-            valor2 *= resultadoMultiplicacao;
             break;
         case '/':
-            let resultadoDivisao;
-            if (totalClicadoVezes === 0) {
-                resultadoDivisao = divisao(valor1, valor2);
-                totalClicadoVezes++;
-            } else {
-                resultadoDivisao = divisao(valor2, resultado);
-            }
+            let resultadoDivisao = divisao(valor1, valor2);
             $('.resultado').text(resultadoDivisao);
-            valor2 /= resultadoDivisao;
             break;
         default:
             $('.resultado').text('teste total');
             break;
     }
 
-    valor1 = undefined;
+    valor1 = resultado;
     valor2 = undefined;
     operacao = undefined;
 });
@@ -120,7 +92,6 @@ $('.resetar').on('click', function () {
     valor2 = undefined;
     operacao = undefined;
     resultado = undefined;
-    totalClicadoVezes = 0;
     $('.resultado').text(0);
 });
 
