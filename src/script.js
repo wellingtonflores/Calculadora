@@ -1,7 +1,6 @@
 let valor1;
 let valor2;
 let resultado;
-let resultado2;
 let operacao;
 let botaoClicado = false;
 let numeroclicado = false;
@@ -39,8 +38,6 @@ $('.numero').on('click', function () {
         $('.operacao').removeClass('operacao_clicada');
     }
 });
-
-console.log('Botão clicado status antes do while: ' + botaoClicado);
 
 $('#total').on('click', function () {
     pressionado($(this));
