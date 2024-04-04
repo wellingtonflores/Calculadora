@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.calculadora {
+    display: grid;
+}
+
+.resultado {
+    background-color: black;
+    color: white;
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: right;
+    padding-right: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+button {
+    width: 50px;
+    height: 50px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    border-bottom: 1px solid rgb(211, 211, 211);
+}
+
+.colunas {
+    display: flex;
+}
+
+.coluna1 {
+    display: grid;
+    border-right: 1px solid rgb(211, 211, 211);
+    border-left: 1px solid rgb(211, 211, 211);
+    border-bottom-left-radius: 10px;
+}
+
+.coluna2 {
+    display: grid;
+    border-right: 1px solid rgb(211, 211, 211);
+}
+
+.coluna3 {
+    display: grid;
+    border-right: 1px solid rgb(211, 211, 211);
+}
+
+.coluna4 {
+    display: grid;
+    border-right: 1px solid rgb(211, 211, 211);
+    border-bottom-right-radius: 10px;
+}
+
+#total {
+    height: 200px;
+    background-color: orange;
+    border-bottom-right-radius: 10px;
+}
+
+#divisao {
+    background-color: orange;
+}
+
+.zero {
+    border-bottom-left-radius: 10px;
+}
+
+.operacao {
+    background-color: rgb(216, 216, 216);
+}
+
+.operacao_clicada {
+    background-color: rgb(255, 255, 255) !important;
+}
+
+.numero,
+.ponto,
+.resetar {
+    background-color: grey;
+}
+
+.pressed {
+    background-color: rgba(0, 0, 0, 0) !important;
+}

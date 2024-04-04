@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Calculadora</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <div class="content">
+            <div class="calculadora">
+                <div class="resultado">0</div>
+                <div class="colunas">
+                    <div class="coluna1">
+                        <button class="operacao" id="adicao">+</button>
+                        <button class="numero">7</button>
+                        <button class="numero">4</button>
+                        <button class="numero">1</button>
+                        <button class="zero numero">0</button>
+                    </div>
+                    <div class="coluna2">
+                        <button class="operacao" id="subtracao">-</button>
+                        <button class="numero">8</button>
+                        <button class="numero">5</button>
+                        <button class="numero">2</button>
+                        <button class="ponto">.</button>
+                    </div>
+                    <div class="coluna3">
+                        <button class="operacao" id="multiplicacao">x</button>
+                        <button class="numero">9</button>
+                        <button class="numero">6</button>
+                        <button class="numero">3</button>
+                        <button class="resetar">AC</button>
+                    </div>
+                    <div class="coluna4">
+                        <button class="operacao" id="divisao">/</button>
+                        <button class="igual bordaBotoes" id="total">=</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
