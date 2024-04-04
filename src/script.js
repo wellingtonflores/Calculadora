@@ -4,8 +4,14 @@ let resultado;
 let resultado2;
 let operacao;
 let botaoClicado = false;
+let numeroclicado = false;
 
 $('.numero').on('click', function () {
+    numeroclicado = true;
+    if (numeroclicado === true) {
+        $('.resetar').text('C');
+    }
+
     if (operacao === undefined) {
         if (valor1 === undefined) {
             valor1 = parseFloat(this.textContent);
@@ -92,6 +98,11 @@ $('.resetar').on('click', function () {
     valor2 = undefined;
     operacao = undefined;
     resultado = undefined;
+    if (numeroclicado === true) {
+        numeroclicado = false;
+        $('.resetar').text('AC');
+    }
+
     $('.resultado').text(0);
 });
 
